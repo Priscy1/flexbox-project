@@ -1,0 +1,94 @@
+// SETTINGS A (SET BELOW ELEMENTS, RUN NPM INIT AND SAVE MAIN)
+// CUSTOM CSS PROPERTIES (variables here will be accesible throughout the doc)
+:root { //same as html selector but with a higher specificity
+    --color-background-1-drak: #ffe5e5;
+    --color-background-2-drak: #132153;
+    --color-backgrund-3-drak: #d8d8d8c0;
+    
+
+    --color-background-dark-y: #ffa600;
+    --color-background-light-y: #f7c05a;
+    --color-background-dark: #16253d;
+    --color-background-light-2: #fff6e5;
+    --color-background-light-1: #F1F2F3;
+    --color-background-light-4: #ffffff;
+    --color-background-light-3: #f1f2f3e1;
+    --color-background-light: #cc0000;
+    --color-background-darker: #990000;
+
+
+    --color-text-light: #fff6e5;
+    --color-text-dark: #0e0b24;
+    --color-text-darker: #ebe7e7;
+  
+
+    --color-header-1: #f0efea;
+    --color-hearder-2:#effcef;
+    --color-header-3: #e2f5cc;
+
+    --color-sidebar-1: #e8f9e9;
+    --color-event-view-1: #e2f5cc;
+
+    --color-text-1: #102a49;
+    --color-text-2: #c5beba;
+    --color-text-3: #f1f0ef;
+
+    --color-footer-1: #d5d6d2;
+    --color-footer-2: #0f1f38;
+
+
+    // FONT VARIABLES
+--font-family-para: 'Montserrat', sans-serif;
+--font-family-h1: 'Open Sans', sans-serif;
+--font-family-tags: 'PT Sans Narrow', sans-serif;
+
+
+// RESPONSIVE BREAKPOINTS
+--bp-largest: 75em;     // 1200px
+--bp-large: 68.75em;    // 1100px
+--bp-medium: 56.25em;   // 900px
+--bp-small: 37.5em;     // 600px
+--bp-smallest: 31.25em; // 500px
+
+// BOX SHADOW 
+--box-shadow-dark: 0 2rem 6rem rgba(0,0,0, .3);
+--shadow-light: 0 2rem 5rem rgba(0,0,0,.06);
+
+--line: 1px solid var(--color-top-background-3);
+
+
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+
+    @media only screen and (max-width: 1100px){
+        font-size: 50%;
+    }
+        
+}
+
+// SETTINGS B 
+body {
+    font-family: var(--font-family-para);
+    // color: var(--color-text-3);
+    font-weight: 400;
+    line-height: 1.6;
+    background-image: linear-gradient(to right bottom, var(--color-background-light), var(--color-background-darker));
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    min-height: 100vh; //to be removed later when content added 
+}

@@ -1,0 +1,801 @@
+// STYLING THE HEADER SECTION
+
+////////// MAIN HEADER SECTION///////
+// PART A
+/////////////////////////////////////
+////Logo
+.logo {
+    height: 5rem; //1 reduce size of logo
+// PART F: From PART E IN LAYOUT (main header)
+    margin-left: 3rem; //2 (space for logo)
+
+    @media only screen and (max-width: 375px) {
+        margin-left: 1.5rem;
+    }
+}
+
+
+
+// PART B
+/////////////////////////////////////
+////Cta
+.cta {
+    display: flex; //2 All 2's center icon
+    align-items: center;
+    justify-content: center;
+    margin-right: 2rem;
+
+    @media only screen and (max-width: 450px) {
+        display: none;
+    }
+
+&__input {
+    font-family: inherit; //2
+    font-size: inherit; //2
+    background-color: var(--color-background-darker); //2
+    border: none; //2
+    color: var(--color-background-light-2); //2
+    padding: 1.2rem .2rem; //2
+    box-shadow: 0 3rem 6rem;
+    // border-radius: 10%; //2
+    width: 95%;//2
+    transition: all .2;
+    margin-right: 1.5rem; //2 (space btn svg icon and more)
+    text-align: center;
+
+    &:focus
+    &:hover{
+        outline: none;// 2
+        width: 100%; //2 (corresponds to width above 90%)
+        background-color: var(--color-main-background-3); //2
+
+    }
+}
+.style {
+    margin-left: 1rem; //3
+    text-align: center; //3
+    font-size: 1.8rem; //3
+    // margin-left: 2rem; //3
+
+    @media only screen and (max-width: 600px) {
+        margin-left: 0;
+        font-size: 1.2rem;
+    }
+}
+
+&__input + &__btn {
+    background-color: var(--color-background-dark-y); //2
+}
+
+// &__btn {
+
+
+// }
+// FOR STYLING SVG THAT IS REMOVED
+&__more-info { //Format svg? set height and width
+    height: 1.5rem; //1
+    width: 7rem; //1
+    flex: 0 0 40%; //2
+    border: none; //2
+    fill: var(--color-background-light-2); //3
+    margin: 0 -1.5rem; //3
+
+    &:focus {
+        outline: none; //3
+    }
+    &:active {
+        transform: translateY(2px); //3
+    }
+
+    @media only screen and (max-width: 900px) {
+        width: 5rem;
+        margin: 0 -1rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+        width: 3.5rem;
+        margin: 0 -1rem;
+        height: 1rem;
+    }
+}
+
+}
+
+
+
+
+
+// PART C
+/////////////////////////////////////
+////User-nav
+.user-nav {
+// PART G: From PART F 2's to 3's(see logo)
+    display: flex; //3 arrange svgs side-by-side
+    align-items: center; //3
+
+    & > * { //selects user-nav and its direct children
+        padding: 0 2rem; //3
+        cursor: pointer; //3
+        // height: 100%; //3 not needed here
+
+    }
+
+    // & > *:hover {
+    //     // background-color: var(--color-event-view-1); //3
+    //     // align-self: stretch; //3
+
+    // }
+
+    &__icon-box {
+        display: flex; //3
+
+
+    }
+
+    &__icon {
+        font-size: 2.5rem;
+        height: 3rem; //1
+        width: 3rem; //1
+        // fill: var(--color-background-light);//3
+        color: var(--color-background-light);
+        // position: relative; relates to position in navigation below
+
+    }
+
+    // &__notification { //PART 3 BUT DOESNT APPLY HERE
+    //    font-size: .8rem;
+    //    height: 1.75rem;
+    //    width: 1.75rem;
+    //    border-radius: 50%;
+    // //    background-color: var(--color-event-view-1);
+    //    color: var(--color-main-background-1);
+    //    position: absolute;
+    //    top: 1.5rem;
+    //    right: 1rem;
+
+        // display: flex; PART 3 BUT DOESNT WORK FOR ME
+        // justify-content: center;
+        // align-items: center;
+    // }
+
+    // &__user {
+
+    // }
+
+    &__user-photo {
+        height: 3.75rem; //1
+        border-radius: 10%; //1
+        margin-right: 1rem;
+    }
+
+    // &__user-name { //PART 3 BUT NOT NEEDED HERE
+    //     color: var(--color-main-background-1);
+    //     font-size: 1.5rem;
+    //     height: .75rem;
+    //     width: 1.75rem;
+    //     // position: absolute;
+    //     // top: 1.5rem;
+    //     // left: 1rem;
+    // }
+}
+
+// PART HEADER (COMPLETELY BY ME)
+/////////////////////////////////////
+////HEADER
+
+.header {
+    background-image: url(../img/band.jpg);
+    background-size: cover;
+    background-position: bottom;
+    height: 50rem; //1
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    // @media only screen and (max-width: 460px) {
+    //     flex-wrap: wrap;
+    //     // height: 12rem;
+    //     // align-content: space-around;
+
+    // }
+
+    &__heading-1 {
+        text-align: center;
+        font-size: 3rem;
+        font-weight: 600;
+        margin-top: 2%;
+
+        @media only screen and (max-width: 600px) {
+            margin-top: 10%
+
+        }
+
+        @media only screen and (max-width: 375px) {
+            font-size: 1.4rem;
+            font-weight: lighter;
+        }
+    }
+
+}
+
+
+
+
+
+// PART A (NEW SECTION SIDE BAR)
+/////////////////////////////////////
+////SIDE NAVIGATION
+.side-nav { //NO. 3's SIDE-NAV AND LINK
+    // background-color: var(--color-top-background-3); //change
+    font-size: 1.3rem;
+    list-style: none;
+    margin-top: 3.5rem;
+
+    @media only screen and (max-width: 900px) {
+        display: flex;
+        margin: 0;
+    }
+    &__item {
+        position: relative; //5
+
+    }
+
+    &:not(:last-child) {
+        margin-bottom: .5rem;
+
+        @media only screen and (max-width: 900px) {
+            margin: 0;
+        }
+    }
+    @media only screen and (max-width: 900px) {
+        justify-content: space-evenly;
+    }
+
+    &__item::before { //ALL THIS PART IS NO.5
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 3px;
+        background-color: var(--color-background-darker);
+        transform: scaleY(0); //6
+        transition: transform 1s,
+                    width .4s cubic-bezier(1,0,0,1) .1s, //6
+                    background-color .1s;//7
+
+
+    }
+
+    &__item:hover::before,
+    &__item--active::before {
+        transform: scaleY(1); //6
+        width: 100%; //6
+    }
+
+    &__item:active::before { //7
+        background-color: var(--color-main-background-5);
+    }
+
+    &__link:link,
+    &__link:visited {
+        color: var(--color-background-light-2);
+        text-decoration: none; //4
+        text-transform: uppercase; //4
+        display: block; //4
+        padding: 1.5rem 3rem; //4
+        position: relative;//6
+        z-index: 10;//6
+
+        display: flex; //5
+        align-items: center; //5
+
+        @media only screen and (max-width: 900px) {
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        @media only screen and (max-width: 600px) {
+            flex-direction: column;
+            padding: 1rem 3rem;
+        }
+    }
+
+    * { //check later
+        margin: 2rem 0;
+    }
+
+
+    &__icon {
+        width: 1.75rem; //1
+        height: 1.75rem; //1
+        margin-right: 2rem; //3
+        fill: currentColor; //3
+        font-size: 2rem;
+
+        @media only screen and (max-width: 600px) {
+           margin-right: 0;
+           width: 1.4rem;
+           height: 1.5rem;
+           margin-bottom: .7rem;
+        }
+    }
+}
+
+
+
+
+// PART B
+/////////////////////////////////////
+////LEGAL TEXT
+
+.legal { //1 for all this part
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 2.5rem;
+    color: var(--color-text-2);
+
+    @media only screen and (max-width: 900px) {
+        display: none;
+    }
+}
+// SEE LAYOUT SIDEBAR SECTION FOR NO. 2
+
+
+
+
+
+// PART A (NEW SECTION GALLERY)
+/////////////////////////////////////
+////GALLERY
+
+.gallery {
+    display: flex; //1
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: var(--color-background-light-y);
+
+
+    &__header {
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+
+        @media only screen and (max-width: 500px) {
+            width: 100%;
+        }
+
+
+        &__header-1 {
+            flex: 1;
+
+        }
+    }
+
+    .gallery__header-1 {
+        margin-left: 30%;
+
+    }
+    // & > * {
+    //     flex: 0 0 33.33333%;
+    // }
+
+    &__item {
+     flex: 0 32%;
+    //  margin-bottom: 2%;
+    //  margin-top: 2%;
+        margin: 2% .6%;
+
+    }
+
+    &__photo {
+        width: 100%;
+        display: block;
+
+
+    }
+}
+
+
+
+// PART A (NEW SECTION EVENT OVERVIEW)
+/////////////////////////////////////
+////EVENT OVERVIEW
+
+.overview {
+    display: flex; //2
+    align-items: center; //3
+    border-bottom: 1px solid var(--color-background-light); //3
+    background-color: var(--color-header-1);
+
+    @media only screen and (max-width: 650px) {
+        margin: 0;
+    }
+
+    @media only screen and (max-width: 500px) {
+        flex-wrap: wrap;
+
+    }
+
+
+    &__heading { //NO.4 APPLIES TO WHOLE OF HEADING
+        font-size: 2.25rem;
+        font-weight: 400;
+        // text-transform: uppercase;
+        letter-spacing: 1px;
+        padding: .5rem 3rem;
+
+        @media only screen and (max-width: 650px) {
+            font-size: 1.7rem;
+            padding: 1.3rem 2rem;
+        }
+
+
+    }
+
+    &__social {
+        // flex: 1; //2
+        margin-right: auto;
+        display: flex;
+
+    }
+    &__social-icon, //1's ON THIS SECTION
+    &__icon-location{
+        width: 1.75rem;
+        height: 1.75rem;
+        color: var(--color-background-light);
+        font-size: 2rem;
+    }
+
+    &__social-icon {
+        margin-right: 1rem;
+
+        @media only screen and (max-width: 500px) {
+            margin-left: 1.2rem;
+        }
+
+    }
+
+    &__location {
+        font-size: 1.2rem;
+        display: flex;
+        vertical-align: center;
+
+        @media only screen and (max-width: 375px) {
+            flex: 0 0 50%;
+        }
+
+        &__icon-location { //NO.4 AFTER PULSATING EFFECT FROM BELOW
+            margin-right: .5rem;
+        }
+
+    }
+
+    &__rating { //NO.4 &NO.5 AFTER PULSATING EFFECT FROM BELOW
+        background-color: var(--color-background-darker); //change
+        margin-left: 3rem;//4
+        color: azure;//4
+        align-self: stretch;//4
+        padding: 0 2.25rem;//4
+        margin-bottom: -1px;
+
+        display: flex; //5
+        align-items: center; //5
+        justify-content: center; //5
+        flex-direction: column; //5
+
+        @media only screen and (max-width: 650px) {
+            // display: none;
+            // padding: 0 1.5rem
+        }
+
+        @media only screen and (max-width: 500px) {
+            flex: 1 1 116px;
+            margin-left: 0;
+        }
+
+        @media only screen and (max-width: 375px) {
+            flex: 0 0 50%;
+        }
+    }
+
+    &__rating-average {
+        font-size: 2.25rem;//4
+        font-weight: 400;//4
+
+
+        @media only screen and (max-width: 650px) {
+            font-size: 1rem
+        }
+
+    }
+
+    &__rating-count {
+        font-size: .8rem;//4
+        text-transform: uppercase;//4
+
+        @media only screen and (max-width: 650px) {
+            font-size: 1rem;
+        }
+    }
+}
+
+
+
+
+// PART A (NEW SECTION location)
+/////////////////////////////////////
+////LOCATION
+
+.btn__inline { //NO. 1 FOR ALL THIS
+    border: none;
+    color: var(--color-background-darker);
+    font-size: 1.3rem;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 2px;
+    display: inline-block;
+    // background-color: var(--color-background-light-3);
+    cursor: pointer;
+    transition: all .2s;
+
+
+    @media only screen and (max-width: 650px) {
+        display: flex;
+        // margin-left: 30rem;
+        margin-right: .7rem;
+    }
+
+    // FROM USER DATE THE LAST ITEM BELOW
+    & span {
+        margin-left: 3px;
+        transition: margin-left .2s;
+    }
+
+
+    &:hover {
+        color: var(--color-text-1);
+
+        span {
+            margin-left: 8px;//from below
+        }
+    }
+    &:hover {
+        outline: none; //2
+        animation: pulse 1s infinite;
+    }
+}
+
+
+// PULSATING EFFECT
+@keyframes pulse { //NO.3 FOR ALL THIS PART
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 1rem 4rem rgba(0,0,0, .25);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: none;
+    }
+}
+
+// SEE ABOVE FOR EDITING OF LOCATION, RATING, RATING-AVERAGE AND RATING-COUNT
+
+
+
+
+// PART A (NEW SECTION DESCRIPTION)
+/////////////////////////////////////
+////DESCRIPTION
+.paragraph:not(:last-of-type) { //NO.1
+    margin-bottom: 2rem;
+}
+
+
+
+
+// PART A (NEW SECTION LIST)
+/////////////////////////////////////
+////LIST
+.list { //NO.1
+    list-style: none;//1
+    margin: 3rem 0;//1
+    padding: 3rem;//1
+    border-top: var(--line);//1
+    border-bottom: var(--line);//1
+
+    display: flex;//2
+    flex-wrap: wrap;//2
+
+    &__item {
+        flex: 0 0 50%;//3
+        margin-bottom: .7rem;//3
+    }
+
+    &__item::before { //NO.4
+        content: "";//4
+        display: inline-block;//4
+        height: 1rem;//4
+        width: 1rem;//4
+        margin-right: .7rem;//4
+
+        // old browser
+        // background-image: url(../img/arrow_forward_ios.svg);//4
+        // background-size: cover;//4
+
+        // New browser
+        @supports (-webkit-mask-image: url()) or (mask-image: url()) {
+            background-color: var(--color-primary);
+            -webkit-mask-image: url(../img/chevron-thin-right.svg);
+            -webkit-mask-size: cover;
+            mask-image: url(../img/chevron-thin-right.svg);
+            mask-size: cover;
+            background-image: none;
+        }
+        
+        // background-color: var(--color-background-dark-y);//4
+        // -webkit-mask-image: url(../img/arrow_forward_ios.svg);//4
+        // -webkit-mask-size: cover;//4
+    }
+}
+
+
+
+
+// PART A (NEW SECTION RECOMMEND)
+/////////////////////////////////////
+////RECOMMEND
+.recommend { //NO.1
+    font-size: 1.3rem;//1
+    color: var(--color-top-background-3);//1
+
+    display: flex;
+    align-items: center;
+
+    @media only screen and (max-width: 500px) {
+        flex-direction: column;
+    }
+
+    &__count {
+        margin-right: auto;
+
+        @media only screen and (max-width: 500px) {
+            margin-right: 0;
+        }
+    }
+
+
+    // &__friends {
+
+    // }
+
+    &__photo {//1
+        box-sizing: content-box;//2
+        height: 4rem;//1
+        width: 4rem;//1
+        border-radius: 50%;//1
+        border: 3px solid #fff;
+
+
+        &:not(:last-child){ //2
+            margin-right: -1.5rem;//2
+        }
+
+    }
+}
+
+
+// PART A (NEW SECTION REVIEW)
+/////////////////////////////////////
+////REVIEW
+.review { //NO.1
+    background-color: var(--color-background-light-y);//1
+    box-shadow: var(--shadow-light);//1
+    padding: 3rem;//1
+    margin-bottom: 3.5rem;//1
+
+    @media only screen and (max-width: 900px) {
+        padding: 2rem;
+        margin-bottom: 3rem;
+    }
+    @media only screen and (max-width: 650px) {
+        display: inline-grid;
+        // margin-left: 15rem;
+    }
+
+
+    &__text {
+        margin-bottom: 2rem;//3
+        text-align: center;
+    }
+
+    // &__user {
+
+    // }
+
+    &__photo {
+        height: 20rem;//2
+        width: 20rem;//2
+        border-radius: 5%;//2
+        margin-bottom: 1.5rem;//3
+        align-items: center;
+        justify-content: center;
+        margin-left: 2.4rem;
+
+        @media only screen and (max-width: 900px) {
+            margin-left: 6rem;
+        }
+
+        @media only screen and (max-width: 650px) {
+            margin-left: 7rem;
+        }
+    }
+
+    &__user-box {
+        display: flex;//2
+        align-items: center;//2
+        justify-content: center;
+
+
+    }
+
+
+    &__heading {
+        margin-left: 6rem;
+        @media only screen and (max-width: 900px) {
+            margin-left: 10rem;
+        }
+    }
+
+
+    &__user-name {//NO.3 FROM HERE DOWN
+        font-size: 2rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        margin-bottom: .3rem;
+        margin-right: auto;
+        color: var(--color-background-darker);
+    }
+
+    &__user-date {
+        font-size: 2rem;
+        color: var(--color-background-darker);
+        margin-left: auto;
+    }
+}
+
+// SEE ABOVE FOR BTN AND LAST PART
+
+.footer {
+
+    height: 20rem;
+    background-color: var(--color-backgrund-3-drak);
+
+
+    &__headings {
+        display: flex;
+        margin-right: 4rem;
+    }
+    &__heading-3 {
+        margin-right: 3rem;
+
+    }
+    &__icons {
+        display: flex;
+        width:10rem;
+        height: 10rem;
+        fill: white;
+        // &__icon {
+
+        // }
+    }
+
+}
+
+
+

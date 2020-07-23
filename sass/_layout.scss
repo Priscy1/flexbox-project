@@ -1,0 +1,117 @@
+// PART A 
+.container {
+    max-width: 120rem; //1
+    margin: 8rem auto; //1 center content inside container
+    background-color: var(--color-backgrund-light-2);
+    box-shadow: var(--box-shadow-dark);
+
+    // testig 
+    min-height: 50rem;
+    @media only screen and (max-width: 1200px) {
+        margin: 0 0;
+        max-width: 100%;
+        width: 100%;
+    }
+
+}
+
+// PART B 
+.main__header {
+    height: 7rem; //1
+    background-color: var(--color-header-1); //1
+    border-bottom: 1px solid var(--color-background-light);//1 (1px = line underthe header) //change
+
+    // PART E: From PART C IN COMPONENT 
+    display: flex; //2 //positions items sids-by-side
+    justify-content: space-between; //2 (equal space btn items)
+    align-items: center; //2 (these 3 styles on parent)
+}
+
+
+
+// PART F 
+.content {
+    display: flex; //1 (Put sidebar and event-view side-by-side)
+
+    @media only screen and (max-width: 900px) {
+        flex-direction: column
+        
+    }
+
+}
+
+// PART D 
+.sidebar {
+    background-color: var(--color-background-dark); //1
+    // Setting properties on individual items (AFTER F = Sidebar)
+    flex: 0 0 18%; //2 define width (grow, shrink & basis -shorthand)
+
+    // PART G FROM PART A SIDENAV SECTION NO.2 IN COMPONENT 
+    display: flex; //3
+    flex-direction: column; //3
+    justify-content: space-between; //3
+
+}
+// PART E
+.event-view {
+    
+// Setting properties on individual items (AFTER F = Sidebar =event-view)
+    flex: 1; //2 (grow, occupy remaining width next to sidebar)
+
+    // testing 
+    // height: 80rem;
+    // background-color: var(--color-main-background-3); //1
+
+}
+
+
+
+
+// PART G AFTER ALL PART F SECCTION IN COMPONENTS 
+.detail { //NO. 1
+    font-size: 1.4rem;//1
+    display: flex; //1
+    padding: 4.5rem;//2
+    border-bottom: 1px solid var(--color-background-light);
+    background-color: white;
+
+
+    @media only screen and (max-width: 900px) {
+       padding-bottom: 2.5rem;
+    }
+
+    @media only screen and (max-width: 650px) {
+        flex-direction: column;
+    }
+}
+.description {
+    padding: 2rem;//1
+    background-color: var(--color-background-light-4); //1
+    box-shadow: 0 2rem 5rem rgba(0,0,0,.6);
+    flex: 0 0 60%; //1
+    margin-right: 4.5rem;//2
+    margin-bottom: 8rem;
+
+    @media only screen and (max-width: 500px) {
+        margin-right: 0;
+    }
+}
+
+.attendants-reviews {
+    // background-color: darkgreen;//1
+    flex: 1; //1
+
+    // Last part after component btn 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+
+    @media only screen and (max-width: 650px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+

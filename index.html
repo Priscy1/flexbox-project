@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,100&family=Open+Sans:ital,wght@0,600;1,400&family=PT+Sans+Narrow&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <!-- <link rel="stylesheet" href="css/icon-font.css"> -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Flex Demo</title>
+</head>
+<body>
+
+
+    <!-- Overall container */ -->
+    <div class="container"> 
+        <header class="main__header">
+            <img src="img/logo-14.png" alt="Logo" class="logo">
+
+                <nav class="user-nav">
+                    <!-- Insert four boxes (one for each svg) -->
+                    <div class="user-nav__icon-box">
+                        <i class="user-nav__icon fas fa-swimmer"></i>
+                        
+                    </div>
+                    <div class="user-nav__icon-box">
+                        <i class="user-nav__icon fas fa-table-tennis"></i>
+                        
+                    </div>
+                    <div class="user-nav__icon-box">
+                        <i class="user-nav__icon fas fa-running"></i>
+                        
+                    </div>
+                    <div class="user-nav__icon-box">
+                        <i class="user-nav__icon fas fa-biking"></i>
+                        
+                    </div>
+                    
+
+                    <div class="user-nav__user">
+                        <img src="img/artist.jpg" alt="Singing Band" class="user-nav__user-photo">
+                        <span class="user-nav__user-name"></span>
+                    </div>
+                </nav>
+
+                <div class="cta">
+                    <a class="cta__input" type="button"><span class="style">More</span>
+                        <i class="cta__more-info fas fa-info"></i>
+                        
+                    </a>
+                </div> 
+        </header>
+
+        <div class="header">
+            <h1 class="header__heading-1">Join upcoming events</h1>
+        </div>
+
+
+        <div class="content">
+            <!-- insert two boxes 0ne for event and one for sidebar -->
+
+            <!-- SIDE NAVIGATION SECTION  -->
+            <nav class="sidebar">
+                <ul class="side-nav">
+                    <li class="side-nav__item side-nav__item--active">
+                        <a href="#" class="side-nav__link">
+                            <i class="side-nav__icon fas fa-calendar-week"></i>
+                            
+                            <span>Events</span>
+                        </a>
+                    </li>
+
+                    <li class="side-nav__item">
+                        <a href="#" class="side-nav__link">
+                            <i class="side-nav__icon fas fa-guitar"></i>
+                            
+                            <span>Concerts</span>
+                        </a>
+                    </li>
+
+
+                    <li class="side-nav__item">
+                        <a href="#" class="side-nav__link">
+                            <i class="side-nav__icon fas fa-bus"></i>
+                            
+                            <span>Trips</span>
+                        </a>
+                    </li>
+
+                    <li class="side-nav__item">
+                        <a href="#" class="side-nav__link">
+                            <i class="side-nav__icon fas fa-hiking"></i>
+                            
+                            <span>Hiking</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="legal">
+                    &copy; 2020 by Priscilla Tetteh. All rights reserved.
+                </div>
+            </nav>
+
+            <!-- EVENT OVERVIEW SECTION  -->
+
+            <div class="event-view">
+                <div class="overview">
+                    <h4 class="overview__heading">Fun is Indeed Fun</h4>
+                    <div class="overview__social">
+                        <i class="overview__social-icon fab fa-twitter"></i>
+                        <i class="overview__social-icon fab fa-facebook-f"></i>
+                        <i class="overview__social-icon fab fa-linkedin-in"></i>
+                        <i class="overview__social-icon fab fa-youtube"></i>
+                    </div>
+
+
+                    <div class="overview__location">
+                        <button class="btn__inline">Brussels, Belgium</button>
+                    </div>
+
+
+                    <div class="overview__rating">
+                        <div class="overview__rating-avarage">5-star</div>
+                        <div class="overview__rating-count">5k-followers</div>
+                    </div>
+                </div>
+
+
+                <!-- DETAILS SECTION  -->
+                <div class="detail">
+                    <div class="description">
+                        <p class="paragraph">
+                            Capicola tail rump bresaola, pig venison t-bone kevin burgdoggen,
+                            flank boudin ball tip biltong. Capicola pork loin kevin burgdoggen 
+                            tri-tip pork belly, ham hock beef ribs.
+                        </p>
+                        <p class="paragraph">
+                            Frankfurter pancetta tail, cow meatloaf buffalo pork belly. 
+                            Pork chop landjaeger pig sirloin shank prosciutto, swine rump,
+                             beef ribs ribeye cow. Tail kielbasa boudin..
+                        </p>
+
+                        <ul class="list">
+                            <li class="list__item">Hiking trips</li>
+                            <li class="list__item">Zumba sessions</li>
+                            <li class="list__item">City trips</li>
+                            <li class="list__item">Local competitions</li>
+                            <li class="list__item">Concert</li>
+                            <li class="list__item">coding competitions</li>
+                        </ul>
+                        <div class="recommend">
+                                <p class="recommend__count">
+                                    A message from participants
+                                </p>
+                                <div class="recommend__friends">
+                                    <img src="img/musician.jpg" alt="Man" class="recommend__photo">
+                                    <img src="img/woman.jpg" alt="Woman" class="recommend__photo">
+                                    <img src="img/dance-2.jpg" alt="Man" class="recommend__photo">
+                                    <img src="img/people-1.jpg" alt="Man" class="recommend__photo">
+                                    <img src="img/couple.jpg" alt="Man" class="recommend__photo">
+                                </div>
+                        </div>
+                    </div>
+
+
+                    <div class="attendants-reviews">
+                        <figure class="review">
+                            <h2 class="review__heading">New Events</h2>
+                            <blockquote class="review__text">
+                                Ground round fatback tri-tip salami frankfurter.
+                            </blockquote>
+                            <figcaption class="review__user">
+                                <img src="img/artist.jpg" alt="Artist" class="review__photo">
+                                <div class="review__user-box">
+                                    <p class="review__user-name">Brussels</p>
+                                    <p class="review__user-date">20/12/20</p>
+                                </div>
+                            </figcaption>
+                        </figure>
+                        <button class="btn__inline">More info<span>&rarr;</span></button>
+
+                    </div>
+                    
+                </div>
+
+
+                <!-- GALLERY SECTION  -->
+                <div class="gallery">
+                    <div class="gallery__header">
+                        <h1 class="gallery__header-1">Colorful Events to Remember in Pcitures</h1>
+                    </div>
+                    <figure class="gallery__item">
+                        <img src="img/artist.jpg" alt="artist" class="gallery__photo">
+                    </figure>
+
+                    <figure class="gallery__item">
+                        <img src="img/band-1.jpg" alt="band" class="gallery__photo">
+                    </figure>
+
+                    <figure class="gallery__item">
+                        <img src="img/dancer.jpg" alt="dance" class="gallery__photo">
+                    </figure>
+
+                    <figure class="gallery__item">
+                        <img src="img/drinks.jpg" alt="drinks" class="gallery__photo">
+                    </figure>
+
+                    <figure class="gallery__item">
+                        <img src="img/zumba.jpg" alt="zumba" class="gallery__photo">
+                    </figure>
+
+                    <figure class="gallery__item">
+                        <img src="img/concert-5.jpg" alt="zumba" class="gallery__photo">
+                    </figure>
+
+                    <figure class="gallery__item">
+                        <img src="img/musician.jpg" alt="zumba" class="gallery__photo">
+                    </figure>
+
+                    <figure class="gallery__item">
+                        <img src="img/concerts.jpg" alt="zumba" class="gallery__photo">
+                    </figure>
+
+                    <figure class="gallery__item">
+                        <img src="img/concert.jpg" alt="woman" class="gallery__photo">
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
